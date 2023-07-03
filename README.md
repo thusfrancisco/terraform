@@ -33,15 +33,3 @@ terraform plan -destroy
 # Terraform Configuration
 
 Terraform can be configured by creating a `terraform.tf` file. Running `terraform init` will setup the Terraform environment as configured.
-
-```ps1
-terraform {
-    required_version = ">= 1.0.0"
-    required_providers = {
-        aws = {
-            source = "hashicorp/aws"
-            version = "~> 3.0"
-        }
-    }
-}
-```
