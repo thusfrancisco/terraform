@@ -38,4 +38,8 @@ Terraform can be configured by creating a `terraform.tf` file. Running `terrafor
 
 It is very important to select a Terraform backend that supports locking - locks prevent state to be altered while it is being accessed.
 
+## Terraform Refresh
 
+The command `terraform refresh` checks if there have been any changes to the infrastructure's state, then updates the documented state. This command has since been _deprecated_.
+
+Currently, the recommended way to refresh is throw the `plan` and `apply` commands, with the optional `-refresh-only` argument. This way, Terraform checks if the infrastructure has suffered any unforeseen changes, and provides a set of suggested changes, applying them if the user approves.
