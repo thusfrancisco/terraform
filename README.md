@@ -33,3 +33,9 @@ terraform plan -destroy
 # Terraform Configuration
 
 Terraform can be configured by creating a `terraform.tf` file. Running `terraform init` will setup the Terraform environment as configured.
+
+# Terraform State and Backend
+
+It is very important to select a Terraform backend that supports locking - locks prevent state to be altered while it is being accessed.
+
+
