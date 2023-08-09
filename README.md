@@ -14,6 +14,30 @@ resource "aws_instance" "web_server" {  # BLOCK
 }
 ```
 
+# Project Structure
+
+Here is an example Terraform project structure:
+
+```sh
+├── README.md
+├── main.tf
+├── variables.tf
+├── outputs.tf
+├── ...
+├── modules/
+│   ├── nestedA/
+│   │   ├── README.md
+│   │   ├── variables.tf
+│   │   ├── main.tf
+│   │   ├── outputs.tf
+│   ├── nestedB/
+│   ├── .../
+├── examples/
+│   ├── exampleA/
+│   │   ├── main.tf
+│   ├── exampleB/
+│   ├── .../
+```
 
 # CLI
 
@@ -58,4 +82,4 @@ The order of precedence for Terraform variables, from least precedence to highes
 - ``*.auto.tfvars.*``
 - Command line with the `-var` option.
 
-The recommended way of setting Terraform variables is to use a ``terraform.tfvars`` file.
+The recommended way of _setting_ Terraform existing variables is to use a ``terraform.tfvars`` file.
